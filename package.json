@@ -1,14 +1,12 @@
 {
   "name": "quill-image-resize-module-fix-for-mobile",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "description": "A module for Quill rich text editor to allow images to be resized.fix for mobile devices.",
   "main": "image-resize.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "webpack -p --progress --colors",
-    "dev": "webpack --progress --colors --watch",
-    "lint": "eslint --ext js,es6 src",
-    "fixlint": "eslint --fix --ext js,es6 src"
+    "release": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress",
+    "dev": "./node_modules/.bin/webpack --progress --watch"
   },
   "repository": {
     "type": "git",
@@ -34,22 +32,17 @@
   },
   "homepage": "https://github.com/yajie2008/quill-image-resize-module#readme",
   "devDependencies": {
-    "babel-cli": "^6.24.0",
-    "babel-eslint": "^7.2.1",
-    "babel-loader": "^6.4.1",
-    "babel-plugin-transform-class-properties": "^6.23.0",
-    "babel-preset-env": "^1.2.2",
-    "babel-preset-es2015": "^6.24.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^14.1.0",
-    "eslint-plugin-import": "^2.2.0",
-    "eslint-plugin-jsx-a11y": "^4.0.0",
-    "eslint-plugin-react": "^6.10.3",
-    "webpack": "^2.7.0"
+    "@babel/core": "^7.23.7",
+    "@babel/plugin-transform-runtime": "^7.23.7",
+    "@babel/preset-env": "^7.23.8",
+    "babel-loader": "^9.1.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
   },
   "dependencies": {
-    "lodash": "^4.17.4",
-    "quill": "^1.2.2",
-    "raw-loader": "^0.5.1"
+    "cross-env": "^7.0.3",
+    "lodash": "^4.17.21",
+    "quill": "^1.3.7",
+    "raw-loader": "^4.0.2"
   }
 }
