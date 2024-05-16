@@ -40,8 +40,8 @@
     "url": "git+https://github.com/yajie2008/quill-image-resize-module.git"
   },
   "scripts": {
-    "dev": "./node_modules/.bin/webpack --progress --watch",
-    "release": "./node_modules/.bin/cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress",
+    "dev": "webpack --progress --watch",
+    "release": "cross-env NODE_ENV=production ./node_modules/.bin/webpack --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "version": "3.0.6"
